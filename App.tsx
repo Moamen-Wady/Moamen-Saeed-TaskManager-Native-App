@@ -12,6 +12,7 @@ import {
 } from "react-native";
 import TaskItem from "./components/TaskItem";
 import { Task, Colors } from "./types";
+import AddTask from "./components/AddTask";
 
 // Color Palette
 const COLORS: Colors = {
@@ -66,6 +67,16 @@ export default function App(): React.JSX.Element {
     setTasks((prev) => prev.filter((task) => task.id !== id));
   };
 
+  /** Add a new task with a unique timestamp-based ID */
+  const handleAddTask = (text: string): void => {
+    const newTask: Task = {
+      id: Date.now().toString(),
+      text: text.trim(),
+      completed: false,
+    };
+    setTasks((prev) => [newTask, ...prev]);
+  };
+
   // Render
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -90,6 +101,9 @@ export default function App(): React.JSX.Element {
         <View style={[styles.progressBarTrack, { width: trackWidth }]}>
           <View style={[styles.progressBarFill, { width: progressWidth }]} />
         </View>
+
+        {/* Add Task */}
+        <AddTask onAddTask={handleAddTask} colors={COLORS} />
 
         {/* Task List */}
         {tasks.length === 0 ? (
