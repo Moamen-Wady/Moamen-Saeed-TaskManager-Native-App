@@ -51,14 +51,15 @@ TaskManager/
 
 ## Features
 
-| Feature | Description |
-|---|---|
-| **Add Task** | Type a description and press `+` or keyboard Done |
-| **Complete Task** | Tap checkbox — strikethrough + teal highlight |
-| **Delete Task** | Tap `✕` — row fades out before removal |
-| **Progress Bar** | Live ratio of completed/total tasks |
-| **Empty State** | Clean message when no tasks remain |
-| **Keyboard Aware** | Layout shifts on keyboard open (iOS + Android) |
+| Feature                 | Description                                       |
+| ----------------------- | ------------------------------------------------- |
+| **Add Task**            | Type a description and press `+` or keyboard Done |
+| **Complete Task**       | Tap checkbox — strikethrough + teal highlight     |
+| **Delete Task**         | Tap `✕` — row fades out before removal            |
+| **Delete Confirmation** | Alert dialog asks "Are you sure?" before removing |
+| **Progress Bar**        | Live ratio of completed/total tasks               |
+| **Empty State**         | Clean message when no tasks remain                |
+| **Keyboard Aware**      | Layout shifts on keyboard open (iOS + Android)    |
 
 ---
 
@@ -76,9 +77,9 @@ TaskManager/
 
 None — only React Native core + Expo. TypeScript support is built into Expo.
 
-| Package | Purpose |
-|---|---|
-| `expo` | Dev toolchain, builds, QR dev server |
-| `typescript` | Type checking |
-| `@types/react` | React type definitions |
-| `@types/react-native` | React Native type definitions |
+| Package               | Purpose                              |
+| --------------------- | ------------------------------------ |
+| `expo`                | Dev toolchain, builds, QR dev server |
+| `typescript`          | Type checking                        |
+| `@types/react`        | React type definitions               |
+| `@types/react-native` | React Native type definitions        |
